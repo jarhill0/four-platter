@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            row()
-            row()
-        }.padding(.all)
+        albums()
     }
 }
 
@@ -22,17 +20,28 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-func peppers() -> some View {
-    let tap = TapGesture()
-        .onEnded { _ in
-            print("View tapped!")
+func albums() -> some View {
+    let albums = get_albums()
+    return VStack {
+        HStack {
+            album_art(album: albums[0])
+            album_art(album: albums[1])
         }
-    return Image("peppers").resizable().scaledToFit().gesture(tap)
+        HStack {
+            album_art(album: albums[2])
+            album_art(album: albums[3])
+        }
+    }.padding(.all)
 }
 
-func row() -> some View {
-    HStack {
-        peppers()
-        peppers()
-    }
+func album_art(album: MPMediaItemCollection) -> some View {
+    let tap = TapGesture()
+        .onEnded { _ in
+            play(album: album)
+        }
+    let artwork = album.representativeItem!.artwork!
+    return Image(uiImage: artwork.image(at: artwork.bounds.size)!)
+        .resizable()
+        .scaledToFit()
+        .gesture(tap)
 }
