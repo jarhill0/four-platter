@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "peppers.jpg",
+      "filename" : "gradient-C 1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "peppers-1.jpg",
+      "filename" : "gradient-C 2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "peppers-2.jpg",
+      "filename" : "gradient-C 3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
