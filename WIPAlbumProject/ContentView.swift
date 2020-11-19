@@ -37,7 +37,7 @@ func grant_permissions_view() -> some View {
     VStack {
         Text(
             "Permissions not granted"
-        ).font(.title).padding(.all)
+        ).font(.title).multilineTextAlignment(.center).padding(.all)
         placeholder_view()
         Text(
             "Please grant access to your music library in Settings."
@@ -57,7 +57,7 @@ func not_enough_albums_view() -> some View {
     VStack {
         Text(
             "Not enough albums"
-        ).font(.title).padding(.all)
+        ).font(.title).multilineTextAlignment(.center).padding(.all)
         placeholder_view()
         Text(
             "We couldn't find enough albums in your library. Try adding more full-length albums with artwork."
