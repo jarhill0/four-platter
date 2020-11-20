@@ -9,8 +9,22 @@ import SwiftUI
 import MediaPlayer
 
 struct ContentView: View {
+    @State private var albums: AlbumResult = get_albums();
+
+    func refresh_albums() {
+        self.albums = get_albums()
+    }
+
     var body: some View {
-        main_view()
+        switch self.albums {
+        case let AlbumResult.four(albums):
+            return AnyView(albums_view(albums: albums))
+        case AlbumResult.not_enough:
+            return AnyView(not_enough_albums_view())
+        case AlbumResult.permission_denied:
+            request_permission(self)
+            return AnyView(grant_permissions_view())
+        }
     }
 }
 
@@ -84,17 +98,6 @@ func placeholder_view() -> some View {
             Image("gradient-C").resizable().scaledToFit()
         }
     }.padding(.all)
-}
-
-func main_view() -> some View {
-    switch get_albums() {
-    case let .four(albums):
-        return AnyView(albums_view(albums: albums))
-    case .not_enough:
-        return AnyView(not_enough_albums_view())
-    case .permission_denied:
-        return AnyView(grant_permissions_view())
-    }
 }
 
 func album_art(album: MPMediaItemCollection) -> some View {

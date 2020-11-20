@@ -31,15 +31,21 @@ func get_albums() -> AlbumResult {
             return .not_enough
         }
     } else {
-        let handler : (MPMediaLibraryAuthorizationStatus) -> () = {
-            switch $0 {
-            case .authorized:
-                print("gotta do something!!")
-            default:
-                break;
-            }
-        }
-        MPMediaLibrary.requestAuthorization(handler)
         return .permission_denied
     }
+}
+
+func request_permission(_ contentView: ContentView) {
+    let handler : (MPMediaLibraryAuthorizationStatus) -> () = {
+        switch $0 {
+        case .authorized:
+            // Doing this immediately returns no results -- some sort of permissions race condition?
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+                contentView.refresh_albums()
+            }
+        default:
+            break;
+        }
+    }
+    MPMediaLibrary.requestAuthorization(handler)
 }
