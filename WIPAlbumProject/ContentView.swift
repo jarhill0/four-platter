@@ -101,15 +101,15 @@ func placeholder_view() -> some View {
 }
 
 func album_art(album: MPMediaItemCollection) -> some View {
-    let tap = TapGesture()
-        .onEnded { _ in
+    let play_album = {
             play(album: album)
         }
     let artwork = album.representativeItem!.artwork!
-    return Image(uiImage: artwork.image(at: artwork.bounds.size)!)
+    return Button(action: play_album) {
+        Image(uiImage: artwork.image(at: artwork.bounds.size)!)
         .resizable()
         .scaledToFit()
-        .gesture(tap)
+    }
 }
 
 let OPEN_SETTINGS_ACTION = {
