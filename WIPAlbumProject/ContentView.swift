@@ -62,7 +62,7 @@ func grant_permissions_view() -> some View {
             .frame(minWidth: 260, maxWidth: .infinity)
             .background(Color.accentColor)
             .foregroundColor(.white)
-            .cornerRadius(40)
+            .cornerRadius(10)
             .padding()
     }
 }
@@ -82,7 +82,7 @@ func not_enough_albums_view() -> some View {
             .frame(minWidth: 260, maxWidth: .infinity)
             .background(Color.accentColor)
             .foregroundColor(.white)
-            .cornerRadius(40)
+            .cornerRadius(10)
             .padding()
     }
 }
