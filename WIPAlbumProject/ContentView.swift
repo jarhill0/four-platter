@@ -89,6 +89,7 @@ func placeholder_gradient(_ linearGradient: LinearGradient) -> some View {
     linearGradient.aspectRatio(
         CGSize(width: 1, height: 1),
         contentMode: .fill)
+        .scaledToFit()
 }
 
 func placeholder_view() -> some View {
