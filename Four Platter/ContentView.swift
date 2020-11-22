@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  WIPAlbumProject
+//  Four Platter
 //
 //  Created by Joseph Rees-Hill on 11/17/20.
 //

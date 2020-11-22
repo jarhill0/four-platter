@@ -1,6 +1,6 @@
 //
 //  music.swift
-//  WIPAlbumProject
+//  Four Platter
 //
 //  Created by Joseph Rees-Hill on 11/18/20.
 //
