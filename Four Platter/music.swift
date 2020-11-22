@@ -16,7 +16,10 @@ enum AlbumResult {
 
 func play(album: MPMediaItemCollection) {
     let musicPlayer = MPMusicPlayerApplicationController.systemMusicPlayer
+    musicPlayer.pause()
     musicPlayer.setQueue(with: album)
+    musicPlayer.repeatMode = .none
+    musicPlayer.shuffleMode = .off
     musicPlayer.play()
 }
 
