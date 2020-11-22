@@ -10,13 +10,14 @@ import MediaPlayer
 
 struct ContentView: View {
     @State private var albums: AlbumResult = get_albums();
+    @Environment(\.verticalSizeClass) var sizeClass
     func refresh_albums() {
         self.albums = get_albums()
     }
     var body: some View {
         switch self.albums {
         case let AlbumResult.four(albums):
-            return AnyView(albums_view(albums: albums, contentView: self))
+            return AnyView(albums_view(albums: albums, sizeClass: sizeClass, contentView: self))
         case AlbumResult.not_enough:
             return AnyView(not_enough_albums_view())
         case AlbumResult.permission_denied:
@@ -32,7 +33,25 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-func albums_view(albums: [MPMediaItemCollection], contentView: ContentView) -> some View {
+func albums_view(albums: [MPMediaItemCollection], sizeClass: UserInterfaceSizeClass?, contentView: ContentView) -> some View {
+    if sizeClass == .compact {
+        return AnyView(HStack {
+            Spacer()
+            albums_square(albums: albums)
+            Spacer()
+            refresh_button(contentView: contentView)
+        })
+    } else {
+        return AnyView(VStack {
+            Spacer()
+            albums_square(albums: albums)
+            Spacer()
+            refresh_button(contentView: contentView)
+        })
+    }
+}
+
+func albums_square(albums: [MPMediaItemCollection]) -> some View {
     VStack {
         HStack {
             album_art(album: albums[0])
@@ -44,6 +63,16 @@ func albums_view(albums: [MPMediaItemCollection], contentView: ContentView) -> s
         }
     }.padding(.all)
 }
+
+func refresh_button(contentView: ContentView) -> some View {
+    Button(action: contentView.refresh_albums) {
+        Image(systemName: "arrow.clockwise.circle.fill")
+            .foregroundColor(Color("AccentColor"))
+            .imageScale(.large)
+            .padding()
+    }
+}
+
 
 func grant_permissions_view() -> some View {
     VStack {
