@@ -18,7 +18,7 @@ struct ContentView: View {
     var body: some View {
         switch self.albums {
         case let AlbumResult.four(albums):
-            return AnyView(albums_view(albums: albums))
+            return AnyView(albums_view(albums: albums, contentView: self))
         case AlbumResult.not_enough:
             return AnyView(not_enough_albums_view())
         case AlbumResult.permission_denied:
@@ -34,7 +34,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-func albums_view(albums: [MPMediaItemCollection]) -> some View {
+func albums_view(albums: [MPMediaItemCollection], contentView: ContentView) -> some View {
     VStack {
         HStack {
             album_art(album: albums[0])
@@ -87,15 +87,37 @@ func not_enough_albums_view() -> some View {
     }
 }
 
+func placeholder_gradient(_ linearGradient: LinearGradient) -> some View {
+    linearGradient.aspectRatio(
+        CGSize(width: 1, height: 1),
+        contentMode: .fill)
+}
+
 func placeholder_view() -> some View {
     VStack {
         HStack {
-            Image("gradient-A").resizable().scaledToFit()
-            Image("gradient-B").resizable().scaledToFit()
+            placeholder_gradient(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color("gradient-color-A"), Color("gradient-color-B")]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing))
+            placeholder_gradient(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color("gradient-color-B"), Color("gradient-color-C")]),
+                    startPoint: .topTrailing,
+                    endPoint: .bottomLeading))
         }
         HStack {
-            Image("gradient-D").resizable().scaledToFit()
-            Image("gradient-C").resizable().scaledToFit()
+            placeholder_gradient(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color("gradient-color-D"), Color("gradient-color-A")]),
+                    startPoint: .bottomLeading,
+                    endPoint: .topTrailing))
+            placeholder_gradient(
+                LinearGradient(
+                    gradient: Gradient(colors: [Color("gradient-color-C"), Color("gradient-color-D")]),
+                    startPoint: .bottomTrailing,
+                    endPoint: .topLeading))
         }
     }.padding(.all)
 }
