@@ -10,11 +10,9 @@ import MediaPlayer
 
 struct ContentView: View {
     @State private var albums: AlbumResult = get_albums();
-
     func refresh_albums() {
         self.albums = get_albums()
     }
-
     var body: some View {
         switch self.albums {
         case let AlbumResult.four(albums):
@@ -124,13 +122,13 @@ func placeholder_view() -> some View {
 
 func album_art(album: MPMediaItemCollection) -> some View {
     let play_album = {
-            play(album: album)
-        }
+        play(album: album)
+    }
     let artwork = album.representativeItem!.artwork!
     return Button(action: play_album) {
         Image(uiImage: artwork.image(at: artwork.bounds.size)!)
-        .resizable()
-        .scaledToFit()
+            .resizable()
+            .scaledToFit()
     }
 }
 
