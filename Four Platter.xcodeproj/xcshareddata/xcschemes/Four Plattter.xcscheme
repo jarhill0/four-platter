@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9AC227832564EC8100F7CC82"
-               BuildableName = "WIPAlbumProject.app"
-               BlueprintName = "WIPAlbumProject"
+               BuildableName = "Four Platter.app"
+               BlueprintName = "Four Platter"
                ReferencedContainer = "container:Four Platter.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9AC227942564EC8400F7CC82"
-               BuildableName = "WIPAlbumProjectTests.xctest"
-               BlueprintName = "WIPAlbumProjectTests"
+               BuildableName = "Four Platter Tests.xctest"
+               BlueprintName = "Four Platter Tests"
                ReferencedContainer = "container:Four Platter.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,8 +43,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "9AC2279F2564EC8400F7CC82"
-               BuildableName = "WIPAlbumProjectUITests.xctest"
-               BlueprintName = "WIPAlbumProjectUITests"
+               BuildableName = "Four Platter UI Tests.xctest"
+               BlueprintName = "Four Platter UI Tests"
                ReferencedContainer = "container:Four Platter.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -65,8 +65,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9AC227832564EC8100F7CC82"
-            BuildableName = "WIPAlbumProject.app"
-            BlueprintName = "WIPAlbumProject"
+            BuildableName = "Four Platter.app"
+            BlueprintName = "Four Platter"
             ReferencedContainer = "container:Four Platter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -82,8 +82,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "9AC227832564EC8100F7CC82"
-            BuildableName = "WIPAlbumProject.app"
-            BlueprintName = "WIPAlbumProject"
+            BuildableName = "Four Platter.app"
+            BlueprintName = "Four Platter"
             ReferencedContainer = "container:Four Platter.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

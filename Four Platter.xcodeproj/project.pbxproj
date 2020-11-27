@@ -36,16 +36,16 @@
 /* Begin PBXFileReference section */
 		9A9194E02570B7FE00753F69 /* FourPlatter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FourPlatter.entitlements; sourceTree = "<group>"; };
 		9AADD37525662EA400550399 /* music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = music.swift; sourceTree = "<group>"; };
-		9AC227842564EC8100F7CC82 /* WIPAlbumProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WIPAlbumProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC227842564EC8100F7CC82 /* Four Platter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Four Platter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC227872564EC8100F7CC82 /* FourPlatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlatter.swift; sourceTree = "<group>"; };
 		9AC227892564EC8100F7CC82 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9AC2278B2564EC8300F7CC82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AC2278E2564EC8300F7CC82 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9AC227902564EC8300F7CC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AC227952564EC8400F7CC82 /* WIPAlbumProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WIPAlbumProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC227952564EC8400F7CC82 /* Four Platter Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Four Platter Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC227992564EC8400F7CC82 /* FourPlatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlatterTests.swift; sourceTree = "<group>"; };
 		9AC2279B2564EC8400F7CC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AC227A02564EC8400F7CC82 /* WIPAlbumProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WIPAlbumProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC227A02564EC8400F7CC82 /* Four Platter UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Four Platter UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC227A42564EC8400F7CC82 /* FourPlatterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlatterUITests.swift; sourceTree = "<group>"; };
 		9AC227A62564EC8400F7CC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,9 +89,9 @@
 		9AC227852564EC8100F7CC82 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AC227842564EC8100F7CC82 /* WIPAlbumProject.app */,
-				9AC227952564EC8400F7CC82 /* WIPAlbumProjectTests.xctest */,
-				9AC227A02564EC8400F7CC82 /* WIPAlbumProjectUITests.xctest */,
+				9AC227842564EC8100F7CC82 /* Four Platter.app */,
+				9AC227952564EC8400F7CC82 /* Four Platter Tests.xctest */,
+				9AC227A02564EC8400F7CC82 /* Four Platter UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,9 +138,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9AC227832564EC8100F7CC82 /* WIPAlbumProject */ = {
+		9AC227832564EC8100F7CC82 /* Four Platter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AC227A92564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "WIPAlbumProject" */;
+			buildConfigurationList = 9AC227A92564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "Four Platter" */;
 			buildPhases = (
 				9AC227802564EC8100F7CC82 /* Sources */,
 				9AC227812564EC8100F7CC82 /* Frameworks */,
@@ -150,14 +150,14 @@
 			);
 			dependencies = (
 			);
-			name = WIPAlbumProject;
+			name = "Four Platter";
 			productName = WIPAlbumProject;
-			productReference = 9AC227842564EC8100F7CC82 /* WIPAlbumProject.app */;
+			productReference = 9AC227842564EC8100F7CC82 /* Four Platter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9AC227942564EC8400F7CC82 /* WIPAlbumProjectTests */ = {
+		9AC227942564EC8400F7CC82 /* Four Platter Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AC227AC2564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "WIPAlbumProjectTests" */;
+			buildConfigurationList = 9AC227AC2564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "Four Platter Tests" */;
 			buildPhases = (
 				9AC227912564EC8400F7CC82 /* Sources */,
 				9AC227922564EC8400F7CC82 /* Frameworks */,
@@ -168,14 +168,14 @@
 			dependencies = (
 				9AC227972564EC8400F7CC82 /* PBXTargetDependency */,
 			);
-			name = WIPAlbumProjectTests;
+			name = "Four Platter Tests";
 			productName = WIPAlbumProjectTests;
-			productReference = 9AC227952564EC8400F7CC82 /* WIPAlbumProjectTests.xctest */;
+			productReference = 9AC227952564EC8400F7CC82 /* Four Platter Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9AC2279F2564EC8400F7CC82 /* WIPAlbumProjectUITests */ = {
+		9AC2279F2564EC8400F7CC82 /* Four Platter UI Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AC227AF2564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "WIPAlbumProjectUITests" */;
+			buildConfigurationList = 9AC227AF2564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "Four Platter UI Tests" */;
 			buildPhases = (
 				9AC2279C2564EC8400F7CC82 /* Sources */,
 				9AC2279D2564EC8400F7CC82 /* Frameworks */,
@@ -186,9 +186,9 @@
 			dependencies = (
 				9AC227A22564EC8400F7CC82 /* PBXTargetDependency */,
 			);
-			name = WIPAlbumProjectUITests;
+			name = "Four Platter UI Tests";
 			productName = WIPAlbumProjectUITests;
-			productReference = 9AC227A02564EC8400F7CC82 /* WIPAlbumProjectUITests.xctest */;
+			productReference = 9AC227A02564EC8400F7CC82 /* Four Platter UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -226,9 +226,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9AC227832564EC8100F7CC82 /* WIPAlbumProject */,
-				9AC227942564EC8400F7CC82 /* WIPAlbumProjectTests */,
-				9AC2279F2564EC8400F7CC82 /* WIPAlbumProjectUITests */,
+				9AC227832564EC8100F7CC82 /* Four Platter */,
+				9AC227942564EC8400F7CC82 /* Four Platter Tests */,
+				9AC2279F2564EC8400F7CC82 /* Four Platter UI Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -291,12 +291,12 @@
 /* Begin PBXTargetDependency section */
 		9AC227972564EC8400F7CC82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9AC227832564EC8100F7CC82 /* WIPAlbumProject */;
+			target = 9AC227832564EC8100F7CC82 /* Four Platter */;
 			targetProxy = 9AC227962564EC8400F7CC82 /* PBXContainerItemProxy */;
 		};
 		9AC227A22564EC8400F7CC82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9AC227832564EC8100F7CC82 /* WIPAlbumProject */;
+			target = 9AC227832564EC8100F7CC82 /* Four Platter */;
 			targetProxy = 9AC227A12564EC8400F7CC82 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -473,14 +473,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4K5455F9F;
-				INFOPLIST_FILE = WIPAlbumProjectTests/Info.plist;
+				INFOPLIST_FILE = "Four Platter Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.WIPAlbumProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -495,14 +495,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4K5455F9F;
-				INFOPLIST_FILE = WIPAlbumProjectTests/Info.plist;
+				INFOPLIST_FILE = "Four Platter Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.WIPAlbumProjectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -516,17 +516,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4K5455F9F;
-				INFOPLIST_FILE = WIPAlbumProjectUITests/Info.plist;
+				INFOPLIST_FILE = "Four Platter UI Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.WIPAlbumProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WIPAlbumProject;
+				TEST_TARGET_NAME = FourPlatter;
 			};
 			name = Debug;
 		};
@@ -536,17 +536,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4K5455F9F;
-				INFOPLIST_FILE = WIPAlbumProjectUITests/Info.plist;
+				INFOPLIST_FILE = "Four Platter UI Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.WIPAlbumProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatterUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = WIPAlbumProject;
+				TEST_TARGET_NAME = FourPlatter;
 			};
 			name = Release;
 		};
@@ -562,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AC227A92564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "WIPAlbumProject" */ = {
+		9AC227A92564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "Four Platter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AC227AA2564EC8400F7CC82 /* Debug */,
@@ -571,7 +571,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AC227AC2564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "WIPAlbumProjectTests" */ = {
+		9AC227AC2564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "Four Platter Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AC227AD2564EC8400F7CC82 /* Debug */,
@@ -580,7 +580,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AC227AF2564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "WIPAlbumProjectUITests" */ = {
+		9AC227AF2564EC8400F7CC82 /* Build configuration list for PBXNativeTarget "Four Platter UI Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AC227B02564EC8400F7CC82 /* Debug */,
