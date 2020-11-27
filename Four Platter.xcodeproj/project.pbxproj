@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A9194E02570B7FE00753F69 /* FourPlatter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FourPlatter.entitlements; sourceTree = "<group>"; };
 		9AADD37525662EA400550399 /* music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = music.swift; sourceTree = "<group>"; };
 		9AC227842564EC8100F7CC82 /* WIPAlbumProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WIPAlbumProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC227872564EC8100F7CC82 /* FourPlatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlatter.swift; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		9AC2277B2564EC8100F7CC82 = {
 			isa = PBXGroup;
 			children = (
+				9A9194E02570B7FE00753F69 /* FourPlatter.entitlements */,
 				9AC227862564EC8100F7CC82 /* Four Platter */,
 				9AC227982564EC8400F7CC82 /* Four Platter Tests */,
 				9AC227A32564EC8400F7CC82 /* Four Platter UI Tests */,
@@ -421,6 +423,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FourPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Four Platter/Preview Content\"";
 				DEVELOPMENT_TEAM = S4K5455F9F;
@@ -433,6 +436,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FourPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Four Platter/Preview Content\"";
 				DEVELOPMENT_TEAM = S4K5455F9F;
@@ -455,6 +460,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
