@@ -66,11 +66,15 @@ func albums_square(albums: [MPMediaItemCollection]) -> some View {
 
 func refresh_button(contentView: ContentView) -> some View {
     Button(action: contentView.refresh_albums) {
-        Image(systemName: "arrow.clockwise.circle.fill")
-            .foregroundColor(Color("AccentColor"))
-            .imageScale(.large)
-            .padding()
-    }
+        Label {
+            Text("Load new selection")
+        } icon: {
+            Image(systemName: "arrow.clockwise.circle.fill")
+                .foregroundColor(Color("AccentColor"))
+                .imageScale(.large)
+                .padding()
+        }
+    }.labelStyle(IconOnlyLabelStyle())
 }
 
 
@@ -155,11 +159,16 @@ func album_art(album: MPMediaItemCollection) -> some View {
         play(album: album)
     }
     let artwork = album.representativeItem!.artwork!
+    let title = album.representativeItem!.albumTitle!
     return Button(action: play_album) {
-        Image(uiImage: artwork.image(at: artwork.bounds.size)!)
-            .resizable()
-            .scaledToFit()
-    }
+        Label {
+            Text(title)
+        } icon: {
+            Image(uiImage: artwork.image(at: artwork.bounds.size)!)
+                .resizable()
+                .scaledToFit()
+        }
+    }.labelStyle(IconOnlyLabelStyle())
 }
 
 let OPEN_SETTINGS_ACTION = {
