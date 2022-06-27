@@ -155,12 +155,16 @@ func placeholder_view() -> some View {
 }
 
 func album_art(album: MPMediaItemCollection) -> some View {
-    let play_album = {
+    let haptics = UIImpactFeedbackGenerator(style: .medium)
+    haptics.prepare()
+
+    let album_selected = {
+        haptics.impactOccurred()
         play(album: album)
     }
     let artwork = album.representativeItem!.artwork!
     let title = album.representativeItem!.albumTitle!
-    return Button(action: play_album) {
+    return Button(action: album_selected) {
         Label {
             Text(title)
         } icon: {
