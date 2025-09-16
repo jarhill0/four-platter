@@ -1,0 +1,55 @@
+{
+  "fill" : {
+    "linear-gradient" : [
+      "display-p3:0.94902,0.56471,0.45490,1.00000",
+      "display-p3:0.94902,0.48627,0.45490,1.00000"
+    ]
+  },
+  "groups" : [
+    {
+      "hidden" : false,
+      "layers" : [
+        {
+          "blend-mode" : "normal",
+          "fill" : "automatic",
+          "glass" : true,
+          "image-name" : "3_record.png",
+          "name" : "3_record"
+        }
+      ],
+      "name" : "iOS 26 png layers",
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "image-name" : "2_teal_sleeves.png",
+          "name" : "2_teal_sleeves"
+        },
+        {
+          "image-name" : "1_yellow_sleeves.png",
+          "name" : "1_yellow_sleeves"
+        }
+      ],
+      "name" : "Sleeves",
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : "shared"
+  }
+}

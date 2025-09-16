@@ -14,6 +14,7 @@
 		9AC2278F2564EC8300F7CC82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC2278E2564EC8300F7CC82 /* Preview Assets.xcassets */; };
 		9AC2279A2564EC8400F7CC82 /* FourPlatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC227992564EC8400F7CC82 /* FourPlatterTests.swift */; };
 		9AC227A52564EC8400F7CC82 /* FourPlatterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC227A42564EC8400F7CC82 /* FourPlatterUITests.swift */; };
+		9AD57B882E78FE38001E9DBD /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 9AD57B872E78FE38001E9DBD /* AppIcon.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		9AC227A02564EC8400F7CC82 /* Four Platter UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Four Platter UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC227A42564EC8400F7CC82 /* FourPlatterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlatterUITests.swift; sourceTree = "<group>"; };
 		9AC227A62564EC8400F7CC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AD57B872E78FE38001E9DBD /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		9AC227862564EC8100F7CC82 /* Four Platter */ = {
 			isa = PBXGroup;
 			children = (
+				9AD57B872E78FE38001E9DBD /* AppIcon.icon */,
 				9AC227872564EC8100F7CC82 /* FourPlatter.swift */,
 				9AC227892564EC8100F7CC82 /* ContentView.swift */,
 				9AADD37525662EA400550399 /* music.swift */,
@@ -240,6 +243,7 @@
 			files = (
 				9AC2278F2564EC8300F7CC82 /* Preview Assets.xcassets in Resources */,
 				9AC2278C2564EC8300F7CC82 /* Assets.xcassets in Resources */,
+				9AD57B882E78FE38001E9DBD /* AppIcon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +433,7 @@
 				DEVELOPMENT_TEAM = S4K5455F9F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Four Platter/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -436,7 +441,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -453,6 +459,7 @@
 				DEVELOPMENT_TEAM = S4K5455F9F;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Four Platter/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,7 +467,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
