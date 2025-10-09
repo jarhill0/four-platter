@@ -5,19 +5,25 @@
 //  Created by Joseph Rees-Hill on 11/17/20.
 //
 
-import SwiftUI
 import MediaPlayer
+import SwiftUI
 
 struct ContentView: View {
-    @State private var albums: AlbumResult = get_albums();
+    @State private var albums: AlbumResult = get_albums()
     @Environment(\.verticalSizeClass) var sizeClass
     func refresh_albums() {
         self.albums = get_albums()
     }
     var body: some View {
         switch self.albums {
-        case let AlbumResult.four(albums):
-            return AnyView(albums_view(albums: albums, sizeClass: sizeClass, contentView: self))
+        case AlbumResult.four(let albums):
+            return AnyView(
+                albums_view(
+                    albums: albums,
+                    sizeClass: sizeClass,
+                    contentView: self
+                )
+            )
         case AlbumResult.not_enough:
             return AnyView(not_enough_albums_view())
         case AlbumResult.permission_denied:
@@ -121,8 +127,9 @@ func not_enough_albums_view() -> some View {
 func placeholder_gradient(_ linearGradient: LinearGradient) -> some View {
     linearGradient.aspectRatio(
         CGSize(width: 1, height: 1),
-        contentMode: .fill)
-        .scaledToFit()
+        contentMode: .fill
+    )
+    .scaledToFit()
 }
 
 func placeholder_view() -> some View {
@@ -130,26 +137,42 @@ func placeholder_view() -> some View {
         HStack {
             placeholder_gradient(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("gradient-color-A"), Color("gradient-color-B")]),
+                    gradient: Gradient(colors: [
+                        Color("gradient-color-A"), Color("gradient-color-B"),
+                    ]),
                     startPoint: .topLeading,
-                    endPoint: .bottomTrailing))
+                    endPoint: .bottomTrailing
+                )
+            )
             placeholder_gradient(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("gradient-color-B"), Color("gradient-color-C")]),
+                    gradient: Gradient(colors: [
+                        Color("gradient-color-B"), Color("gradient-color-C"),
+                    ]),
                     startPoint: .topTrailing,
-                    endPoint: .bottomLeading))
+                    endPoint: .bottomLeading
+                )
+            )
         }
         HStack {
             placeholder_gradient(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("gradient-color-D"), Color("gradient-color-A")]),
+                    gradient: Gradient(colors: [
+                        Color("gradient-color-D"), Color("gradient-color-A"),
+                    ]),
                     startPoint: .bottomLeading,
-                    endPoint: .topTrailing))
+                    endPoint: .topTrailing
+                )
+            )
             placeholder_gradient(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("gradient-color-C"), Color("gradient-color-D")]),
+                    gradient: Gradient(colors: [
+                        Color("gradient-color-C"), Color("gradient-color-D"),
+                    ]),
                     startPoint: .bottomTrailing,
-                    endPoint: .topLeading))
+                    endPoint: .topLeading
+                )
+            )
         }
     }.padding(.all)
 }
