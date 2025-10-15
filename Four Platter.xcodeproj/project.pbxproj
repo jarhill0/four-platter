@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		9AC2278F2564EC8300F7CC82 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AC2278E2564EC8300F7CC82 /* Preview Assets.xcassets */; };
 		9AC2279A2564EC8400F7CC82 /* FourPlatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC227992564EC8400F7CC82 /* FourPlatterTests.swift */; };
 		9AC227A52564EC8400F7CC82 /* FourPlatterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC227A42564EC8400F7CC82 /* FourPlatterUITests.swift */; };
+		9AD57B882E78FE38001E9DBD /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 9AD57B872E78FE38001E9DBD /* AppIcon.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		9AC227A02564EC8400F7CC82 /* Four Platter UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Four Platter UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC227A42564EC8400F7CC82 /* FourPlatterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlatterUITests.swift; sourceTree = "<group>"; };
 		9AC227A62564EC8400F7CC82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AD57B872E78FE38001E9DBD /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		9AC227862564EC8100F7CC82 /* Four Platter */ = {
 			isa = PBXGroup;
 			children = (
+				9AD57B872E78FE38001E9DBD /* AppIcon.icon */,
 				9AC227872564EC8100F7CC82 /* FourPlatter.swift */,
 				9AC227892564EC8100F7CC82 /* ContentView.swift */,
 				9AADD37525662EA400550399 /* music.swift */,
@@ -197,8 +200,9 @@
 		9AC2277C2564EC8100F7CC82 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 2600;
 				TargetAttributes = {
 					9AC227832564EC8100F7CC82 = {
 						CreatedOnToolsVersion = 12.1;
@@ -240,6 +244,7 @@
 			files = (
 				9AC2278F2564EC8300F7CC82 /* Preview Assets.xcassets in Resources */,
 				9AC2278C2564EC8300F7CC82 /* Assets.xcassets in Resources */,
+				9AD57B882E78FE38001E9DBD /* AppIcon.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +342,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = S4K5455F9F;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -358,6 +365,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -398,8 +406,10 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = S4K5455F9F;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -412,6 +422,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
@@ -426,17 +437,20 @@
 				CODE_SIGN_ENTITLEMENTS = FourPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Four Platter/Preview Content\"";
-				DEVELOPMENT_TEAM = S4K5455F9F;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Four Platter/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,17 +464,20 @@
 				CODE_SIGN_ENTITLEMENTS = FourPlatter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Four Platter/Preview Content\"";
-				DEVELOPMENT_TEAM = S4K5455F9F;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Four Platter/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.reeshill.FourPlatter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,10 +486,8 @@
 		9AC227AD2564EC8400F7CC82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S4K5455F9F;
 				INFOPLIST_FILE = "Four Platter Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -491,10 +506,8 @@
 		9AC227AE2564EC8400F7CC82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S4K5455F9F;
 				INFOPLIST_FILE = "Four Platter Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -513,9 +526,7 @@
 		9AC227B02564EC8400F7CC82 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S4K5455F9F;
 				INFOPLIST_FILE = "Four Platter UI Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -533,9 +544,7 @@
 		9AC227B12564EC8400F7CC82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S4K5455F9F;
 				INFOPLIST_FILE = "Four Platter UI Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

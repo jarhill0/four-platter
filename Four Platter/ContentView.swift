@@ -5,19 +5,23 @@
 //  Created by Joseph Rees-Hill on 11/17/20.
 //
 
-import SwiftUI
 import MediaPlayer
+import SwiftUI
 
 struct ContentView: View {
-    @State private var albums: AlbumResult = get_albums();
-    @Environment(\.verticalSizeClass) var sizeClass
+    @State private var albums: AlbumResult = get_albums()
     func refresh_albums() {
         self.albums = get_albums()
     }
     var body: some View {
         switch self.albums {
-        case let AlbumResult.four(albums):
-            return AnyView(albums_view(albums: albums, sizeClass: sizeClass, contentView: self))
+        case AlbumResult.four(let albums):
+            return AnyView(
+                albums_view(
+                    albums: albums,
+                    contentView: self
+                )
+            )
         case AlbumResult.not_enough:
             return AnyView(not_enough_albums_view())
         case AlbumResult.permission_denied:
@@ -33,21 +37,17 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-func albums_view(albums: [MPMediaItemCollection], sizeClass: UserInterfaceSizeClass?, contentView: ContentView) -> some View {
-    if sizeClass == .compact {
-        return AnyView(HStack {
-            Spacer()
-            albums_square(albums: albums)
-            Spacer()
-            refresh_button(contentView: contentView)
-        })
-    } else {
-        return AnyView(VStack {
-            Spacer()
-            albums_square(albums: albums)
-            Spacer()
-            refresh_button(contentView: contentView)
-        })
+func albums_view(
+    albums: [MPMediaItemCollection],
+    contentView: ContentView
+) -> some View {
+    return NavigationStack {
+        albums_square(albums: albums)
+            .toolbar {
+                ToolbarItem(placement: .bottomBar) {
+                    refresh_button(contentView: contentView)
+                }
+            }
     }
 }
 
@@ -69,60 +69,76 @@ func refresh_button(contentView: ContentView) -> some View {
         Label {
             Text("Load new selection")
         } icon: {
-            Image(systemName: "arrow.clockwise.circle.fill")
-                .foregroundColor(Color("AccentColor"))
-                .imageScale(.large)
+            Image(systemName: "arrow.clockwise")
                 .padding()
         }
     }.labelStyle(IconOnlyLabelStyle())
 }
 
-
 func grant_permissions_view() -> some View {
-    VStack {
+    let button_text = "Go to Settings"
+    let button = Button(
+        action: OPEN_SETTINGS_ACTION,
+        label: {
+            Text("\(button_text) \(Image(systemName: "arrow.up.right"))")
+                .padding(
+                    EdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 50)
+                )
+                .accessibilityLabel(button_text)
+        },
+    )
+
+    return VStack {
+        placeholder_view()
         Text(
             "Permissions not granted"
-        ).font(.title).multilineTextAlignment(.center).padding(.all)
-        placeholder_view()
+        ).font(.title).multilineTextAlignment(.center)
         Text(
             "Please grant access to your music library in Settings."
         ).multilineTextAlignment(.center).padding()
-        Button("Go to Settings", action: OPEN_SETTINGS_ACTION)
-            .padding()
-            .font(.callout)
-            .frame(minWidth: 260, maxWidth: .infinity)
-            .background(Color.accentColor)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .padding()
+        if #available(iOS 26.0, *) {
+            button.buttonStyle(.glassProminent)
+        } else {
+            button.buttonStyle(.borderedProminent)
+        }
     }
 }
 
 func not_enough_albums_view() -> some View {
-    VStack {
+    let button_text = "Open Music"
+    let button = Button(
+        action: OPEN_MUSIC_ACTION,
+        label: {
+            Text("\(button_text) \(Image(systemName: "arrow.up.right"))")
+                .padding(
+                    EdgeInsets(top: 10, leading: 50, bottom: 10, trailing: 50)
+                )
+                .accessibilityLabel(button_text)
+        },
+    )
+
+    return VStack {
+        placeholder_view()
         Text(
             "Not enough albums"
-        ).font(.title).multilineTextAlignment(.center).padding(.all)
-        placeholder_view()
+        ).font(.title).multilineTextAlignment(.center)
         Text(
             "We couldn't find enough albums in your library. Try adding more full-length albums with artwork."
         ).multilineTextAlignment(.center).padding()
-        Button("Go to Music", action: OPEN_MUSIC_ACTION)
-            .padding()
-            .font(.callout)
-            .frame(minWidth: 260, maxWidth: .infinity)
-            .background(Color.accentColor)
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .padding()
+        if #available(iOS 26.0, *) {
+            button.buttonStyle(.glassProminent)
+        } else {
+            button.buttonStyle(.borderedProminent)
+        }
     }
 }
 
 func placeholder_gradient(_ linearGradient: LinearGradient) -> some View {
     linearGradient.aspectRatio(
         CGSize(width: 1, height: 1),
-        contentMode: .fill)
-        .scaledToFit()
+        contentMode: .fill
+    )
+    .scaledToFit()
 }
 
 func placeholder_view() -> some View {
@@ -130,26 +146,42 @@ func placeholder_view() -> some View {
         HStack {
             placeholder_gradient(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("gradient-color-A"), Color("gradient-color-B")]),
+                    gradient: Gradient(colors: [
+                        Color("gradient-color-A"), Color("gradient-color-B"),
+                    ]),
                     startPoint: .topLeading,
-                    endPoint: .bottomTrailing))
+                    endPoint: .bottomTrailing
+                )
+            )
             placeholder_gradient(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("gradient-color-B"), Color("gradient-color-C")]),
+                    gradient: Gradient(colors: [
+                        Color("gradient-color-B"), Color("gradient-color-C"),
+                    ]),
                     startPoint: .topTrailing,
-                    endPoint: .bottomLeading))
+                    endPoint: .bottomLeading
+                )
+            )
         }
         HStack {
             placeholder_gradient(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("gradient-color-D"), Color("gradient-color-A")]),
+                    gradient: Gradient(colors: [
+                        Color("gradient-color-D"), Color("gradient-color-A"),
+                    ]),
                     startPoint: .bottomLeading,
-                    endPoint: .topTrailing))
+                    endPoint: .topTrailing
+                )
+            )
             placeholder_gradient(
                 LinearGradient(
-                    gradient: Gradient(colors: [Color("gradient-color-C"), Color("gradient-color-D")]),
+                    gradient: Gradient(colors: [
+                        Color("gradient-color-C"), Color("gradient-color-D"),
+                    ]),
                     startPoint: .bottomTrailing,
-                    endPoint: .topLeading))
+                    endPoint: .topLeading
+                )
+            )
         }
     }.padding(.all)
 }
